@@ -65,6 +65,18 @@
         </style>
     </head>
     <body>
+    @if (Session::has('alert-danger'))
+        <div class="alert alert-danger">{{ Session::get('alert-danger') }}</div>
+    @endif
+
+    @if (Session::has('alert-error'))
+        <div class="alert alert-error">{{ Session::get('alert-error') }}</div>
+    @endif
+
+    @if (Session::has('alert-success'))
+        <div class="alert alert-success">{{ Session::get('alert-success') }}</div>
+    @endif
+    
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
