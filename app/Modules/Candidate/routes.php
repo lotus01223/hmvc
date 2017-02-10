@@ -17,8 +17,4 @@ Route::get('/', function () {
 
 Route::get('home', ['as' => 'candidate.home', 'uses' => 'CandidateController@getHome']);
 
-Route::get('contact-us', ['as' => 'candidate.contact', 'uses' => 'CandidateController@getContactUs']);
-Route::post('contact-us', ['as' => 'candidate.contact', 'uses' => 'CandidateController@postContactUs']);
-Route::get('upload', ['as' => 'candidate.upload', 'uses' => 'CandidateController@getUpload']);
-Route::post('upload', ['as' => 'candidate.upload', 'uses' => 'CandidateController@postUpload']);
 ?>

@@ -13,29 +13,19 @@ class ContactMail extends Mailable
 {
 	use Queueable, SerializesModels;
 
+	protected $subject;
 	protected $content;
-	protected $mail_from;
-	/**
-	 * @param $data Array
-	 */
-	function __construct($data)
+
+	function __construct($subject, $content)
 	{
-		$this->subject = $data['subject'];
-		$this->content = $data['content'];
-		$this->mail_from = $data['mail_from'];
+		$this->subject = $subject;
+		$this->content = $content;
 	}
 
-	/**
-	 * mail layout
-	 */
 	public function build()
 	{
-		return $this->view('Candidate::mail.contact')
-			->with([
-				'subject' => $this->subject,
-				'content' => $this->content,
-				'mail_from' => $this->mail_from,
-			]);
+		echo "welcome";
+		// return $this->view('Candidate::mail.contact');
 	}
 
 }
