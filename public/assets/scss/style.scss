@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+// setting
+@import 'core/_setting';
+@import 'core/_utility';
+
+
+body {
+	// font en
+	@include font_en;
+}
+
+// -- ↓ edit ↓ -- //
+
+@import "./layout/_common"; // 共通パーツ
+@import "./layout/_title"; // タイトル
+@import "./layout/_top"; //ログイン前トップ
+@import "./layout/_base"; // 基本の内容
+@import "./layout/_box_layout"; // layout設定
+@import "./form/_form"; // form
+@import "./bootstrap/_bootstrap_reset"; // bootstrap リセット
+// @import "./plugins/drawer/_drawer";
+@import "./plugins/perfect-scrollbar/_perfect-scrollbar"; // scroll
+
+// -- ↑ edit ↑ -- //
+
+
+// css3 animate
+@import "./animate/_animate";
+
+
+// parts
+@import './core/_parts';

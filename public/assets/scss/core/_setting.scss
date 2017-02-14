@@ -1,0 +1,108 @@
+
+
+//ドキュメントのパス
+$DOCUMENT_PATH: './assets';
+
+
+//画像のパス
+$IMG_PATH: '#{$DOCUMENT_PATH}/img/';
+//背景 background: url(#{$IMG_PATH}/　← これで取得
+
+
+//ベンダープレフィックス
+$VENDOR_PREFIX: -webkit-, -moz-, -ms-, null;
+
+
+//メディクリ
+$ssmall:  "(max-width:480px)";
+$small:  "(max-width:768px)";
+$middle: "(max-width:980px)";
+$large:  "(max-width:1200px)";
+$largeMax: "(min-width:1201px)";
+
+
+@media #{largeMax} {
+    //1201px以上
+}
+@media #{large} {
+    //1200px以下
+}
+@media #{middle} {
+    //980px以下
+}
+@media #{$small} {
+    //768px以下
+}
+@media #{$ssmall} {
+    //480px以下
+}
+
+
+
+@mixin font_jp {
+    font-family: "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", "Kozuka Gothic Pro Light", Meiryo, "MS PGothic", sans-serif;
+}
+@mixin font_en {
+    font-family: "Noto Sans", "Avenir Next", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", "Kozuka Gothic Pro Light", Meiryo, "MS PGothic", sans-serif;
+}
+@mixin font_micho {
+    font-family: "Times New Roman", YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
+}
+
+
+$color_blue_L: #0558a0;
+$color_blue: #0b4477;
+$color_blue_D: #0b355a;
+
+
+$color_green_L: #6abf6a;
+$color_green: #5cb85c;
+$color_green_D: #449d44;
+
+
+$color_gray_L: #ccc;
+$color_gray: #bbb;
+$color_gray_D: #999;
+
+
+$color_light_blue_L: #4eb3d5;
+$color_light_blue: #4eb3d5;
+$color_light_blue_D: #4eb3d5;
+
+
+$color_yellow_L: #fbeb3c;
+$color_yellow: #ffed26;
+$color_yellow_D: #e0d022;
+
+
+$color_red_D: #ea4f4b;
+$color_red: #d9534f;
+$color_red_L: #c9302c;
+
+
+
+// icon font
+
+.icon_font_style {
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.linea-arrows-10 { font-family: "linea-arrows-10" !important; @extend .icon_font_style; }
+
+.linea-basic-10 { font-family: "linea-basic-10" !important; @extend .icon_font_style; }
+
+.linea-basic-elaboration-10 { font-family: "linea-basic-elaboration-10" !important; @extend .icon_font_style; }
+
+.linea-music-10 { font-family: "linea-music-10" !important; @extend .icon_font_style; }
+
+.linea-software-10 { font-family: "linea-software-10" !important; @extend .icon_font_style; }
+
+.linea-weather-10 { font-family: "linea-weather-10" !important; @extend .icon_font_style; }
+
+

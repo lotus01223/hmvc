@@ -1,0 +1,86 @@
+
+
+
+@mixin prefixer($property, $value...) {
+	@each $prefix in $VENDOR_PREFIX {
+		#{$prefix}#{$property}: $value;
+	}
+}
+
+
+
+// 使い方
+// @include transform(translate(0, -20px));
+@mixin transform($transforms) {
+	@each $prefix in $VENDOR_PREFIX {
+		#{$prefix}transform: $transforms;
+	}
+}
+
+
+
+// 使い方
+// @include animation(DASH, 2s, ease-in-out, .5s, forwards);
+@mixin animation($keyframes_name, $time1, $easing, $time2, $property) {
+	@each $prefix in $VENDOR_PREFIX {
+		#{$prefix}animation: $keyframes_name $time1 $easing $time2 $property;
+	}
+}
+
+
+
+// 使い方
+// @include transition(all, .3s, ease-in-out);
+@mixin transition($property, $time, $easing) {
+	@each $prefix in $VENDOR_PREFIX {
+		#{$prefix}transition: $property $time $easing;
+	}
+}
+
+
+
+// 使い方
+// @include transform-origin();
+@mixin transform-origin ($origin) {
+	@each $prefix in $VENDOR_PREFIX {
+		#{$prefix}transform-origin: $origin;
+	}
+}
+
+
+
+// 使い方
+//@include transform(rotateY(360deg));
+@mixin rotate($deg) {
+	@each $prefix in $VENDOR_PREFIX {
+		#{$prefix}transform: $deg;
+	}
+}
+
+
+// 使い方
+//@include transform(scale(1.8,1.8));
+@mixin scale($scale) {
+	@each $prefix in $VENDOR_PREFIX {
+		#{$prefix}transform: scale($scale);
+	}
+}
+
+
+
+
+
+// translate
+@mixin translate($x, $y) {
+	@include transform(translate($x, $y));
+}
+
+// skew
+@mixin skew($x, $y) {
+	@include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+
+
+
+

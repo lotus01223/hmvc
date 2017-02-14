@@ -1,0 +1,33 @@
+
+.column_wrap_1 {
+    background: #fff;
+    max-width: 960px;
+    width: 100%;
+    margin: 3em auto 0 auto;
+    .inner {
+        padding: 6em 8em;
+    }
+}
+
+//edit page version
+.column_wrap_2 {
+    background: #fff;
+    max-width: 960px;
+    width: 100%;
+    margin: 3em auto 0 auto;
+    .inner {
+        padding: 6em 3em;
+    }
+}
+
+@media #{$small} {
+    .column_wrap_1 {
+        background: #fff;
+        max-width: none;
+        width: auto;
+        margin: 3em auto 0 auto;
+        .inner {
+            padding: 4em 1.6em;
+        }
+    }
+}

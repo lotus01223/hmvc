@@ -1,0 +1,29 @@
+
+.title_block {
+	.ttl {
+		span {}
+	}
+}
+
+
+
+.title_block {
+	&.type1 {
+		.ttl {
+			color: $color_blue;
+			font-size: 2.8em;
+			font-weight: 700;
+			span {}
+		}
+	}
+}
+@media #{$small} {
+	.title_block {
+		&.type1 {
+			.ttl {
+				font-size: 1.8em;
+				span {}
+			}
+		}
+	}
+}

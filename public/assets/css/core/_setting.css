@@ -1,0 +1,27 @@
+.icon_font_style, .linea-arrows-10, .linea-basic-10, .linea-basic-elaboration-10, .linea-music-10, .linea-software-10, .linea-weather-10 {
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.linea-arrows-10 {
+  font-family: "linea-arrows-10" !important; }
+
+.linea-basic-10 {
+  font-family: "linea-basic-10" !important; }
+
+.linea-basic-elaboration-10 {
+  font-family: "linea-basic-elaboration-10" !important; }
+
+.linea-music-10 {
+  font-family: "linea-music-10" !important; }
+
+.linea-software-10 {
+  font-family: "linea-software-10" !important; }
+
+.linea-weather-10 {
+  font-family: "linea-weather-10" !important; }

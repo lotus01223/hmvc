@@ -1,0 +1,400 @@
+
+// ----------------------------------------
+// bootstrap reset
+// ----------------------------------------
+
+.row {
+	margin-left: -8px;
+	margin-right: -8px;
+}
+
+[class*="col-"] {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+
+
+
+// ----------------------------------------
+// btn
+// ----------------------------------------
+.btn {
+		position: relative;
+		font-size: 1.3em;
+		padding: 1.1em 2em;
+		min-width: 160px;
+		border-radius: 2px;
+		&:focus {
+			outline: none;
+		}
+		@include transition(all, .1s, ease-in-out);
+		[class*="icon-"] {
+			font-size: 1.6em;
+			line-height: 1;
+			padding: 0 4px;
+			vertical-align: middle;
+			margin: 0;
+			position: relative;
+			top: 2px;
+		}
+}
+.btn-center {
+	display: inline-block;
+	vertical-align: middle;
+	float: none;
+	margin: 0 auto;
+	.btn_item {
+		float: none !important;
+		display: inline-block !important;
+		vertical-align: middle !important;
+		margin: 0 auto !important;
+	}
+	.btn {
+		float: none !important;
+		display: inline-block !important;
+		vertical-align: middle !important;
+		margin: 0 auto !important;
+		white-space: normal;
+	}
+}
+.btn[class*="secondary"].btn-outline {
+    color: #717171 !important;
+}
+.btn-round {
+	border-radius: 50em;
+	-webkit-border-radius: 50em;
+}
+.btn-xs {
+	font-size: 1em;
+	padding: .8em 1.4em;
+}
+.btn-sm {
+	font-size: 1.1em;
+	padding: 1em 1.6em;
+}
+.btn-md {
+	font-size: 1.15em;
+	padding: 1.2em 3em;
+	margin: 0 auto;
+}
+.btn-lg {
+	font-size: 1.2em;
+	padding: 1.4em 3em;
+	margin: 0 auto;
+}
+
+@media #{$small} {
+	.btn-lg {
+		padding: 1.4em 1.8em;
+	}
+}
+
+
+// ------------------
+//	primary
+// ------------------
+.btn[class*="primary"] {
+	background: $color_blue;
+	color: #fff;
+	border: 1px solid $color_blue;
+	&:hover {
+		background: $color_blue_L;
+		border-color: $color_blue_L;
+	}
+	&:focus {
+		background: $color_blue_L;
+		border-color: $color_blue_L;
+	}
+	&.btn-outline {
+		background: #fff;
+		color: $color_blue;
+		&:hover {
+			background: $color_blue;
+			color: #fff;
+		}
+	}
+}
+
+
+
+// ------------------
+//	secondary
+// ------------------
+.btn[class*="secondary"] {
+	background: $color_gray;
+	color: #fff;
+	border: 1px solid $color_gray;
+	&:hover {
+		background: $color_gray_L;
+		border-color: $color_gray_L;
+	}
+	&:focus {
+		background: $color_gray_L;
+		border-color: $color_gray_L;
+	}
+	&.btn-outline {
+		background: #fff;
+		color: $color_gray;
+		&:hover {
+			background: $color_gray;
+			color: #fff;
+		}
+	}
+}
+
+
+// ------------------
+//	success
+// ------------------
+.btn[class*="success"] {
+	background: $color_green;
+	color: #fff;
+	border: 1px solid $color_green;
+	&:hover {
+		background: $color_green_L;
+		border-color: $color_green_L;
+	}
+	&:focus {
+		background: $color_green_L;
+		border-color: $color_green_L;
+	}
+	&.btn-outline {
+		background: #fff;
+		color: $color_green;
+		&:hover {
+			background: $color_green;
+			color: #fff;
+		}
+	}
+}
+
+
+// ------------------
+//	info
+// ------------------
+.btn[class*="info"] {
+	background: $color_light_blue;
+	color: #fff;
+	border: 1px solid $color_light_blue;
+	&:hover {
+		background: $color_light_blue_L;
+		border-color: $color_light_blue_L;
+	}
+	&:focus {
+		background: $color_light_blue_L;
+		border-color: $color_light_blue_L;
+	}
+	&.btn-outline {
+		background: #fff;
+		color: $color_light_blue;
+		&:hover {
+			background: $color_light_blue;
+			color: #fff;
+		}
+	}
+}
+
+
+
+// ------------------
+//	warning
+// ------------------
+.btn[class*="warning"] {
+	background: $color_yellow;
+	color: $color_blue;
+	border: 1px solid $color_yellow;
+	&:hover {
+		background: $color_yellow_L;
+		border-color: $color_yellow_L;
+	}
+	&:focus {
+		background: $color_yellow_L;
+		border-color: $color_yellow_L;
+	}
+	&.btn-outline {
+		background: #fff;
+		color: $color_yellow_D;
+		&:hover {
+			background: $color_yellow;
+			color: $color_blue;
+		}
+	}
+}
+
+
+// ------------------
+//	danger
+// ------------------
+.btn[class*="danger"] {
+	background: $color_red;
+	color: #fff;
+	border: 1px solid $color_red;
+	&:hover {
+		background: $color_red_L;
+		border-color: $color_red_L;
+	}
+	&:focus {
+		background: $color_red_L;
+		border-color: $color_red_L;
+	}
+	&.btn-outline {
+		background: #fff;
+		color: $color_red;
+		&:hover {
+			background: $color_red;
+			color: #fff;
+		}
+	}
+}
+
+.form-control {
+	height: auto;
+	box-shadow: none;
+	border-radius: 3px;
+	border: none;
+	padding: .5em 1em;
+	font-size: 16px;
+	border: 1px solid #e2e2e2;
+	background: #fcfcfc;
+	@include transition(all, .2s, ease-in-out);
+	&:focus {}
+}
+.form-control,
+.alert {
+	border-radius: 2px;
+}
+.radio label, .checkbox label {
+	padding-left: 0;
+}
+select.form-control {
+	background: #fcfcfc url(../img/icon/icon-select_arrow.svg) no-repeat 96% center;
+	&.size_sm {
+		background-position: 90% center;
+	}
+}
+
+textarea {
+	resize: vertical;
+	min-height: 12em;
+}
+
+@media #{$small} {
+	textarea {
+		min-height: 8em;
+	}
+}
+
+
+
+.has-success .form-control-success,
+.has-warning .form-control-warning,
+.has-danger .form-control-danger {
+	background-repeat: no-repeat;
+	background-position: 98% center;
+	background-size: 18px;
+}
+
+
+
+
+/* ---------------
+	ブロック系
+-------------------------------------------------------*/
+.panel {
+	box-shadow: none;
+	border-radius: 8px;
+}
+
+.panel-default {
+	border-color: #eee
+}
+
+/* ---------------
+	モーダル系
+-------------------------------------------------------*/
+.modal-backdrop {
+	opacity: .3 !important;
+	filter: alpha(opacity=95);
+}
+
+.modal-content,
+.modal-content_it_skill {
+	box-shadow: none;
+	border: none;
+	border-radius: 0rem;
+}
+
+.modal-header {
+	padding: 5px;
+	border-bottom: 0px;
+	.close {
+		font-size: 4em;
+	}
+}
+
+.modal-dialog {
+  max-width: 880px !important;
+  margin: 30px auto;
+	.modal-content_it_skill {
+		padding-bottom:4em;
+		.modal-body {
+			padding: 1em 4em;
+		}
+	}
+	.modal-content.search_modal {
+		background: transparent;
+		.modal-body {
+			padding: 4em 6em;
+			.close {
+				font-size: 40px;
+				color: #fff;
+				opacity: 1;
+				font-weight: normal;
+				position: absolute;
+				top: 10;
+				right: 0;
+			}
+		}
+	}
+}
+
+/* ---------------
+	アラート系
+-------------------------------------------------------*/
+.alert {
+	margin: 1em 0 0 0;
+	padding: 1.6em;
+	font-size: 90%;
+}
+
+.alert-danger {
+	color: #d26b62;
+	background-color: #fdeeed;
+	border-color: #f38e85;
+}
+
+.alert-success {
+	color: #3c763d;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+}
+
+@media #{$small} {
+	.alert {
+		padding: 1.2em 1.6em;
+		font-size: 86%;
+	}
+}
+
+/* ---------------
+	プルダウン系
+-------------------------------------------------------*/
+.dropdown-menu {
+	padding: 1px 0;
+	li {
+		a {
+			padding: .8em 1em;
+		}
+	}
+}
