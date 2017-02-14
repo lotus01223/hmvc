@@ -13,12 +13,11 @@ class CreatePrefecturesMasterTable extends Migration
      */
     public function up()
     {
-        Schema::create('prefectures_masters', function (Blueprint $table) {
+        Schema::create('prefectures', function (Blueprint $table) {
             $table->increments('id');
             $table->string('prefectures_en');
             $table->string('prefectures_jp');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('modified_at')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -29,6 +28,6 @@ class CreatePrefecturesMasterTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('prefectures_masters');
+        Schema::dropIfExists('prefectures');
     }
 }

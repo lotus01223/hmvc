@@ -18,7 +18,7 @@ class CreateRegisterMailTable extends Migration
             $table->string('email');
             $table->string('token');
             $table->string('password');
-            $table->timestamp('updated_at')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -29,6 +29,6 @@ class CreateRegisterMailTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('register_mail');
+        Schema::dropIfExists('register_mails');
     }
 }

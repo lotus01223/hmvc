@@ -13,12 +13,11 @@ class CreateLanguageMasterTable extends Migration
      */
     public function up()
     {
-        Schema::create('language_masters', function (Blueprint $table) {
+        Schema::create('languages', function (Blueprint $table) {
             $table->increments('id');
             $table->string('language_en');
             $table->string('language_jp');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('modified_at')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -29,6 +28,6 @@ class CreateLanguageMasterTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('language_masters');
+        Schema::dropIfExists('languages');
     }
 }

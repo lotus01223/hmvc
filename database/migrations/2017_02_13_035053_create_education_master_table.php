@@ -17,10 +17,7 @@ class CreateEducationMasterTable extends Migration
             $table->increments('id');
             $table->string('edu_en');
             $table->string('edu_jp');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('modified_at')->nullable();
-
-            
+            $table->timestamps();
         });
     }
 

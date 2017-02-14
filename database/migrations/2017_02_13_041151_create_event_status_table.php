@@ -13,7 +13,7 @@ class CreateEventStatusTable extends Migration
      */
     public function up()
     {
-        Schema::create('event_statuses', function (Blueprint $table) {
+        Schema::create('events', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreateEventStatusTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('event_statuses');
+        Schema::dropIfExists('events');
     }
 }

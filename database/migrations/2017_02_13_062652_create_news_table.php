@@ -19,12 +19,12 @@ class CreateNewsTable extends Migration
             $table->string('content');
             $table->date('date');
             $table->string('target');
-            $table->boolean('status')->default(false);
+            $table->tinyInteger('status');
             $table->timestamp('released_at')->nullable();
             $table->timestamp('created_at')->nullable();
             $table->string('created_by')->nullable();
-            $table->timestamp('modified_at')->nullable();
-            $table->string('modified_by')->nullable();            
+            $table->timestamp('updated_at')->nullable();
+            $table->string('updated_by')->nullable();            
         });
     }
 

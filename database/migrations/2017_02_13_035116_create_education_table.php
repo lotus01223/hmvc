@@ -16,19 +16,18 @@ class CreateEducationTable extends Migration
         Schema::create('educations', function (Blueprint $table) {
             $table->increments('id');
             $table->string('school_name');
-            $table->integer('edu_master_id')->unsigned();
+            $table->integer('edu_master_id')->index();
             $table->string('major');
             $table->integer('from_year');
             $table->integer('from_month');
             $table->integer('to_year')->nullable();
             $table->integer('to_month')->nullable();
-            $table->integer('gra_status');
+            $table->tinyInteger('gra_status');
             $table->integer('order');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('modified_at')->nullable();
+            $table->timestamps();
 
             // foreign
-            $table->foreign('edu_master_id')->references('id')->on('education_masters');
+            // $table->foreign('edu_master_id')->references('id')->on('education_masters');
         });
     }
 

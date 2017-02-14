@@ -13,12 +13,11 @@ class CreateItSkillCategoryMasterTable extends Migration
      */
     public function up()
     {
-        Schema::create('it_skill_category_masters', function (Blueprint $table) {
+        Schema::create('it_skill_categories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('skill_cate_en_name');
             $table->string('skill_cate_jp_name');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('modified_at')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -29,6 +28,6 @@ class CreateItSkillCategoryMasterTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('it_skill_category_masters');
+        Schema::dropIfExists('it_skill_categories');
     }
 }

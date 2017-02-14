@@ -13,12 +13,11 @@ class CreateJobMasterTable extends Migration
      */
     public function up()
     {
-        Schema::create('job_masters', function (Blueprint $table) {
+        Schema::create('jobs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('job_en');
             $table->string('job_jp');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('modified_at')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -29,6 +28,6 @@ class CreateJobMasterTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('job_masters');
+        Schema::dropIfExists('jobs');
     }
 }

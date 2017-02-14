@@ -19,8 +19,7 @@ class CreatePortfolioTable extends Migration
             $table->string('file_name');
             $table->string('file_uri');
             $table->text('file_comment')->nullable();
-            $table->timestamp('update_at')->nullable();
-            $table->timestamp('modified_at')->nullable();
+            $table->timestamps();
         });
     }
 

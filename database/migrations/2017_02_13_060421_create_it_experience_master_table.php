@@ -13,12 +13,11 @@ class CreateItExperienceMasterTable extends Migration
      */
     public function up()
     {
-        Schema::create('it_expreience_masters', function (Blueprint $table) {
+        Schema::create('it_experiences', function (Blueprint $table) {
             $table->increments('id');
             $table->string('exp_label_en');
             $table->string('exp_label_jp');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('modified_at')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -29,6 +28,6 @@ class CreateItExperienceMasterTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('it_expreience_masters');
+        Schema::dropIfExists('it_experiences');
     }
 }

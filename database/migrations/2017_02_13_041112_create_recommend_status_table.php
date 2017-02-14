@@ -13,11 +13,10 @@ class CreateRecommendStatusTable extends Migration
      */
     public function up()
     {
-        Schema::create('recommend_statuses', function (Blueprint $table) {
+        Schema::create('recommends', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('recommend_status');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('modified_at')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -28,6 +27,6 @@ class CreateRecommendStatusTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('recommend_statuses');
+        Schema::dropIfExists('recommends');
     }
 }

@@ -13,12 +13,11 @@ class CreatePeriodMasterTable extends Migration
      */
     public function up()
     {
-        Schema::create('period_masters', function (Blueprint $table) {
+        Schema::create('periods', function (Blueprint $table) {
             $table->increments('id');
             $table->string('period_en');
             $table->string('period_jp');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('modified_at')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -29,6 +28,6 @@ class CreatePeriodMasterTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('period_masters');
+        Schema::dropIfExists('periods');
     }
 }

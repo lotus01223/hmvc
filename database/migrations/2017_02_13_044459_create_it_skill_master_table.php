@@ -15,14 +15,13 @@ class CreateItSkillMasterTable extends Migration
     {
         Schema::create('it_skill_masters', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('skill_cate_master_id')->unsigned();
+            $table->integer('skill_cate_master_id')->index();
             $table->string('skill_en_name');
             $table->string('skill_jp_name');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('modified_at')->nullable();
+            $table->timestamps();
 
             // foreign
-            $table->foreign('skill_cate_master_id')->references('id')->on('it_skill_category_masters');
+            // $table->foreign('skill_cate_master_id')->references('id')->on('it_skill_category_masters');
         });
     }
 

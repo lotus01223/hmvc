@@ -16,21 +16,21 @@ class ModulesServiceProvider extends ServiceProvider
         // For each of the registered modules, include their routes and Views
         $modules = config("module.modules");
 
-        while (list($module, $domain) = each($modules)) {
+        // while (list($module, $domain) = each($modules)) {
 
-            if ($_SERVER['HTTP_HOST'] === $domain) {
-                // Load the routes for each of the modules
-                if(file_exists(__DIR__.'/'.$module.'/routes.php')) {
-                    include __DIR__.'/'.$module.'/routes.php';
-                }
+        //     if ($_SERVER['HTTP_HOST'] === $domain) {
+        //         // Load the routes for each of the modules
+        //         if(file_exists(__DIR__.'/'.$module.'/routes.php')) {
+        //             include __DIR__.'/'.$module.'/routes.php';
+        //         }
 
-                // Load the views
-                if(is_dir(__DIR__.'/'.$module.'/Views')) {
-                    $this->loadViewsFrom(__DIR__.'/'.$module.'/Views', $module);
-                }    
-            }      
+        //         // Load the views
+        //         if(is_dir(__DIR__.'/'.$module.'/Views')) {
+        //             $this->loadViewsFrom(__DIR__.'/'.$module.'/Views', $module);
+        //         }    
+        //     }      
 
-        }
+        // }
     }
 
     /**

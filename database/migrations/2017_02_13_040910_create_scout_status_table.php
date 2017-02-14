@@ -13,11 +13,10 @@ class CreateScoutStatusTable extends Migration
      */
     public function up()
     {
-        Schema::create('scout_statuses', function (Blueprint $table) {
+        Schema::create('scouts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('scout_status');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('modified_at')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -28,6 +27,6 @@ class CreateScoutStatusTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('scout_statuses');
+        Schema::dropIfExists('scouts');
     }
 }

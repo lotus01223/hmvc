@@ -21,9 +21,8 @@ class CreateAdminAccountsTable extends Migration
             $table->string('password');
             $table->string('phone');
             $table->string('extension');
-            $table->boolean('status')->default(false);
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('modified_at')->nullable();
+            $table->tinyInteger('status');
+            $table->timestamps();
             $table->timestamp('lastlogin_at')->nullable();
         });
     }

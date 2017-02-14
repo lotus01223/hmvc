@@ -13,12 +13,11 @@ class CreateNationalityMasterTable extends Migration
      */
     public function up()
     {
-        Schema::create('nationality_masters', function (Blueprint $table) {
+        Schema::create('nationalities', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nationality_en');
             $table->string('nationality_jp');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('modified_at')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -29,6 +28,6 @@ class CreateNationalityMasterTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('nationality_masters');
+        Schema::dropIfExists('nationalities');
     }
 }
