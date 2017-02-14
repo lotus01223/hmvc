@@ -91,5 +91,6 @@ class CandidateController extends Controller
     		$respone->delete();    		
     	}
     }
+    
 
 }
