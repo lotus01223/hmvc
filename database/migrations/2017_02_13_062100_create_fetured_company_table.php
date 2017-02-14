@@ -18,10 +18,9 @@ class CreateFeturedCompanyTable extends Migration
             $table->string('company_image');
             $table->string('logo_image');
             $table->string('address');
-            $table->boolean('status')->default(false);
+            $table->tinyInteger('status');
             $table->integer('order');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('modified_at')->nullable();
+            $table->timestamps();
         });
     }
 

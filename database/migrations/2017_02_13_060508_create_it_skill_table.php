@@ -13,17 +13,16 @@ class CreateItSkillTable extends Migration
      */
     public function up()
     {
-        Schema::create('it_skill', function (Blueprint $table) {
+        Schema::create('it_skills', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('it_skill_master_id')->unsigned();
-            $table->integer('experience_master_id')->unsigned();
+            $table->integer('it_skill_master_id')->index();
+            $table->integer('experience_master_id')->index();
             $table->integer('order');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('modified_at')->nullable();
+            $table->timestamps();
 
             // foreign
-            $table->foreign('it_skill_master_id')->references('id')->on('it_skill_masters');
-            $table->foreign('experience_master_id')->references('id')->on('it_expreience_masters');
+            // $table->foreign('it_skill_master_id')->references('id')->on('it_skill_masters');
+            // $table->foreign('experience_master_id')->references('id')->on('it_expreience_masters');
         });
     }
 
@@ -34,6 +33,6 @@ class CreateItSkillTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('it_skill');
+        Schema::dropIfExists('it_skills');
     }
 }

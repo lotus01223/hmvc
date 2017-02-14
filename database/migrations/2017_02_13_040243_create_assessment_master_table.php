@@ -13,7 +13,7 @@ class CreateAssessmentMasterTable extends Migration
      */
     public function up()
     {
-        Schema::create('assessment_masters', function (Blueprint $table) {
+        Schema::create('assessments', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreateAssessmentMasterTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('assessment_masters');
+        Schema::dropIfExists('assessments');
     }
 }

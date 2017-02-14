@@ -15,17 +15,16 @@ class CreateTestResultTable extends Migration
     {
         Schema::create('test_results', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('assessment_master_id')->unsigned();
+            $table->integer('assessment_master_id')->index();
             $table->string('name');
             $table->string('evaluation');
             $table->integer('score');
             $table->integer('attempts');
             $table->string('rank');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('modified_at')->nullable();
+            $table->timestamps();
 
             // foreign
-            $table->foreign('assessment_master_id')->references('id')->on('assessment_masters');
+            // $table->foreign('assessment_master_id')->references('id')->on('assessment_masters');
         });
     }
 

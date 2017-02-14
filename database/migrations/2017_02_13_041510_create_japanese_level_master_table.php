@@ -13,11 +13,10 @@ class CreateJapaneseLevelMasterTable extends Migration
      */
     public function up()
     {
-        Schema::create('japanese_level_masters', function (Blueprint $table) {
+        Schema::create('japanese_levels', function (Blueprint $table) {
             $table->increments('id');
             $table->string('level');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('modified_at')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -28,6 +27,6 @@ class CreateJapaneseLevelMasterTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('japanese_level_masters');
+        Schema::dropIfExists('japanese_levels');
     }
 }

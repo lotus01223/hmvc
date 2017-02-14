@@ -20,15 +20,14 @@ class CreateItJobExperiencesTable extends Migration
             $table->integer('from_month')->unsigned();
             $table->integer('to_year')->unsigned()->nullable();
             $table->integer('to_month')->unsigned()->nullable();
-            $table->integer('job_master_id')->unsigned();
-            $table->integer('it_skill_id')->unsigned();
+            $table->integer('job_master_id')->index();
+            $table->integer('it_skill_id')->index();
             $table->integer('order');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('modified_at')->nullable();
+            $table->timestamps();
 
             // foreign
-            $table->foreign('job_master_id')->references('id')->on('job_masters');
-            $table->foreign('it_skill_id')->references('id')->on('it_skill');
+            // $table->foreign('job_master_id')->references('id')->on('job_masters');
+            // $table->foreign('it_skill_id')->references('id')->on('it_skill');
         });
     }
 

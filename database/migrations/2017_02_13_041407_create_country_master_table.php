@@ -13,12 +13,11 @@ class CreateCountryMasterTable extends Migration
      */
     public function up()
     {
-        Schema::create('country_masters', function (Blueprint $table) {
+        Schema::create('countries', function (Blueprint $table) {
             $table->increments('id');
             $table->string('country_en');
             $table->string('country_jp');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('modified_at')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -29,6 +28,6 @@ class CreateCountryMasterTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('country_masters');
+        Schema::dropIfExists('countries');
     }
 }

@@ -20,10 +20,9 @@ class CreateFeturedItEngineerTable extends Migration
             $table->string('nickname')->nullable();
             $table->integer('age');
             $table->string('address');
-            $table->boolean('status')->default(false);
+            $table->tinyInteger('status');
             $table->integer('order');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('modified_at')->nullable();
+            $table->timestamps();
         });
     }
 
