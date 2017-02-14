@@ -93,3 +93,4 @@ class CandidateController extends Controller
     }
 
 }
+
